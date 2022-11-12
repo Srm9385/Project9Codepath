@@ -6,29 +6,29 @@
 
 ### MHN-Admin Deployment (Required)
 
-**Summary:** I deployed the MHN-Admin panel onto a VM on Google Cloud
+**Summary:** I deployed the MHN-Admin panel onto a VM on Google Cloud, using the Google Cloud SDK. As you can see, it is deployed and is seeing a lot of activity. I first had to set up a VM with Ubunutu and then run the script that installed all of the dependencies, libraries, and code that built the honeypot. I also had to ensure the VM had ports 10000 and 3000 open so it can receive data from the sensor honeypots.
 
 <img src="mhn-admin.gif">
 
 ### Dionaea Honeypot Deployment (Required)
 
-**Summary:** Briefly in your own words, what does dionaea do?
+**Summary:** Dionaea is intentionally vulnerable and attracts attackers to investiage potential exploits in the "server". It allows exploitation within the controlled environment to give attackers the impression they are doing damage, however, it actually tracks their IP and sends it to the MHN admin server so a security researcher can view their actions and better understand what ports they are targeting, the protocols they are attempting to exploit, and malware they are using. As we can see in the GIF, an IP from Mexico is attempting to exploit the server via SMBD protocol, which is commonly used for file sharing across windows networks.
 
 <img src="dionaea-honeypot.gif">
 
 ### Database Backup (Required) 
 
-**Summary:** What is the RDBMS that MHN-Admin uses? What information does the exported JSON file record?
+**Summary:** The MHN admin uses mongodb to store information on attacks. 
 
 *Be sure to upload session.json directly to this GitHub repo/branch in order to get full credit.*
 
 ### Deploying Additional Honeypot(s) (Optional)
 
-#### X Honeypot
+#### Conpot Honeypot
 
-**Summary:** What does this honeypot simulate and do for a security researcher?
+**Summary:** This honeypot simulates an Industrial Control System and allows security researchers to better understand attacker's techniques when targeting these sorts of systems. As the GIF shows us below, a couple different IP addresses were investigating port 502 with the modbus and s7comm protocols (protocols that are used in ICSs) as well as the http protocol. 
 
-<img src="x-honeypot.gif">
+<img src="conpot-honeypot.gif">
 
 ### Malware Capture and Identification (Optional)
 
@@ -43,5 +43,4 @@ SHA1 Hash: *Run `sha1sum` on the file and record the hash here.*
 <img src="x-malware.gif">
 
 ## Notes
-
-Describe any challenges encountered while doing the assignment.
+I had to restart the challenge from the begining because I originally used my .edu address to build the project, but my organization's permissons settings disallowed me from adding the tags I needed to get the honeypot sensors communicating with the admin panel. I knew they were getting traffic because when I SSHed into them, the logs showed a bunch of IP addresses.
