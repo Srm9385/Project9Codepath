@@ -8,7 +8,7 @@
 
 **Summary:** I deployed the MHN-Admin panel onto a VM on Google Cloud, using the Google Cloud SDK. As you can see, it is deployed and is seeing a lot of activity. I first had to set up a VM with Ubunutu and then run the script that installed all of the dependencies, libraries, and code that built the honeypot. I also had to ensure the VM had ports 10000 and 3000 open so it can receive data from the sensor honeypots.
 
-<img src="mhn-admin.gif">
+<img src="mhnadmin.gif">
 
 ### Dionaea Honeypot Deployment (Required)
 
