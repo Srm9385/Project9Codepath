@@ -18,9 +18,9 @@
 
 ### Database Backup (Required) 
 
-**Summary:** The MHN admin uses mongodb to store information on attacks. 
+**Summary:** The MHN admin uses mongodb to store information on attacks. I downloaded the json file several days after setting up the honeypots, so the entire contents are quite large. 
 
-*Be sure to upload session.json directly to this GitHub repo/branch in order to get full credit.*
+*See repository for JSON file*
 
 ### Deploying Additional Honeypot(s) (Optional)
 
@@ -32,15 +32,17 @@
 
 ### Malware Capture and Identification (Optional)
 
-#### X Malware
+#### WannaCry Malware
 
-**Summary:** How did you find it? Which honeypot captured it? What does each malware do?
+**Summary:** My Dionaea honeypot captured several strains of WannaCry Malware, a popular malware strain that exploited the Eternal Blue vulnerability developed by the National Security Administration. Dionaea provides attackers with the temptation to exploit the SMB protocol vulnerability, which explains why we saw so much interest in the port with SMBD
 
-MD5 Hash: *Run `md5sum` on the file and record the hash here.*
+<img src="malware.gif">
 
-SHA1 Hash: *Run `sha1sum` on the file and record the hash here.*
+MD5 Hash: * a4d49eaf60a8e333708469606ad9e1a4*
 
-<img src="x-malware.gif">
+SHA1 Hash: * 0debce6791059e239af3bc6ab42c1605c4a03937*
+
+
 
 ## Notes
 I had to restart the challenge from the begining because I originally used my .edu address to build the project, but my organization's permissons settings disallowed me from adding the tags I needed to get the honeypot sensors communicating with the admin panel. I knew they were getting traffic because when I SSHed into them, the logs showed a bunch of IP addresses.
